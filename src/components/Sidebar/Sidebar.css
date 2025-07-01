@@ -1,0 +1,132 @@
+.sidebar {
+  width: 18%;
+  min-height: 100vh;
+  border: 1.5px solid #d3d3d3;
+  border-top: 0;
+  border-bottom: 0;
+  font-size: max(1vw, 1rem);
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.sidebar-options {
+  padding-top: 50px;
+  padding-left: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid #e0e0e0;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.sidebar-option:hover {
+  background-color: #f7f8ff;
+  border-color: var(--theme-color);
+  transform: translateX(2px);
+}
+
+.sidebar-option.active {
+  background-color: #f0f4ff;
+  border-color: var(--theme-color);
+  font-weight: 600;
+  color: var(--theme-color);
+  box-shadow: inset 3px 0 0 var(--theme-color);
+}
+
+.sidebar-option img {
+  width: 22px;
+  height: 22px;
+}
+
+.sidebar-option p {
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar-option p {
+    display: none;
+  }
+
+  .sidebar-options {
+    padding-left: 10px;
+    align-items: center;
+  }
+
+  .sidebar-option {
+    padding: 10px;
+    justify-content: center;
+    border-radius: 8px;
+  }
+
+  .sidebar-option:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    border: none;
+    border-top: 1px solid #d3d3d3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .sidebar-options {
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .sidebar-option {
+    flex-direction: column;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .sidebar-option img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sidebar-option.active {
+    background-color: transparent;
+    box-shadow: none;
+    font-weight: 600;
+    color: var(--theme-color);
+  }
+
+  .sidebar-option p {
+    display: block;
+    font-size: 10px;
+  }
+}

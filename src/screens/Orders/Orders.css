@@ -1,0 +1,127 @@
+.order-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  align-items: start;
+  gap: 30px;
+  border: 2px solid var(--theme-color);
+  padding: 20px;
+  margin-block: 30px;
+  font-size: 1.4rem;
+  color: #505050;
+  background-color: #fdfdff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.order-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 16px rgba(33, 6, 62, 0.1);
+}
+
+.order-item-food,
+.order-item-name {
+  font-weight: 600;
+  color: var(--theme-color);
+}
+
+.order-item-name {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.order-item-address {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #666;
+}
+
+.order-item-select {
+  background-color: #ffe8e4;
+  border: 1px solid var(--theme-color);
+  width: max(11vw, 120px);
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.order-item-select:hover {
+  background-color: #ffdad1;
+}
+
+@media (max-width: 1024px) {
+  .order-item {
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 20px;
+    font-size: 1.3rem;
+  }
+
+  .order-item-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-item {
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .order-item-select {
+    padding: 8px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-item {
+    grid-template-columns: 1fr;
+    font-size: 1.1rem;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .order-item-name {
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+
+  .order-item-address {
+    font-size: 1.1rem;
+  }
+
+  .order-item-select {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .order-item {
+    font-size: 1rem;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .order-item-name {
+    font-size: 1.2rem;
+    margin-top: 8px;
+  }
+
+  .order-item-address {
+    font-size: 1rem;
+  }
+
+  .order-item-select {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+}

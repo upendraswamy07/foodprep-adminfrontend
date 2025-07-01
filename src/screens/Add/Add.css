@@ -1,0 +1,126 @@
+.screen {
+  width: 70%;
+  margin-left: max(5vw, 25px);
+  margin-block: 50px;
+  color: #6d6d6d;
+  font-size: 1.6rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  place-self: center;
+  width: max(40%, 300px);
+  border: 2px solid var(--theme-color);
+  border-radius: 12px;
+  padding: 5%;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.screen form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-img-upload img {
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.add-img-upload img:hover {
+  transform: scale(1.05);
+}
+
+.add-category {
+  min-width: 125px;
+}
+
+.add-product-name input,
+.add-product-description textarea,
+.add-price input,
+.add-category select {
+  padding: 12px;
+  border: 1px solid var(--theme-color);
+  border-radius: 8px;
+  font-size: 1.4rem;
+  color: #333;
+  background-color: #fdfdfd;
+  transition: border 0.3s ease;
+}
+
+.add-product-description textarea {
+  resize: none;
+  height: 100px;
+}
+
+.add-btn {
+  max-width: 150px;
+  padding: 12px;
+  border: none;
+  background-color: var(--theme-color);
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #3a1764;
+  transform: scale(1.02);
+}
+
+.add-category-price {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.add-price input {
+  width: 100%;
+}
+
+@media (max-width: 420px) {
+  .screen {
+    width: 90%;
+    margin: 20px auto;
+    font-size: 1.2rem;
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .add-img-upload img {
+    width: 100px;
+  }
+
+  .add-category-price {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .add-btn {
+    width: 100%;
+    max-width: none;
+    font-size: 1rem;
+  }
+
+  .add-product-name input,
+  .add-product-description textarea,
+  .add-price input,
+  .add-category select {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .add-product-description textarea {
+    height: 80px;
+  }
+}
